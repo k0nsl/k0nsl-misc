@@ -283,7 +283,7 @@ proc = subprocess.Popen("easy_install PyYAML > /dev/null 2>&1", shell=True)
 output = proc.communicate()
 
 import time
-time.sleep(5)
+time.sleep(4)
 
 
 print "Generating vhosts..."
@@ -305,5 +305,3 @@ output = proc.communicate()
 print "Updating cPanel Configuration"
 proc = subprocess.Popen(currentdir + '/nginxinstaller2 ' + sys.argv[1], shell=True, cwd=currentdir)
 output = proc.communicate()
-
-
