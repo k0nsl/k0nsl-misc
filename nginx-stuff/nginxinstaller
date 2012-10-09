@@ -140,7 +140,12 @@ print srcpath
 nsrcpath = currentdir + "/nginx-1.2.3"
 ssrcpath = currentdir + "/setuptools-0.6c11"
 
-
+#############################################################
+##                                                         ##
+## k0nsl: I only added; --with-ngx_http_stub_status_module ##
+##                                                         ##
+##                                                         ##
+#############################################################
 nginxconfigure = """ ./configure --with-pcre=%s/pcre-8.30  --sbin-path=/usr/local/sbin  --conf-path=/etc/nginx/nginx.conf  --pid-path=/var/run/nginx.pid  --error-log-path=/var/log/nginx/error.log  --http-log-path=/var/log/nginx/access.log  --with-http_realip_module  --with-http_ssl_module --with-ngx_http_stub_status_module  --http-client-body-temp-path=/tmp/nginx_client  --http-proxy-temp-path=/tmp/nginx_proxy  --http-fastcgi-temp-path=/tmp/nginx_fastcgi  --with-http_stub_status_module > /dev/null 2>&1""" % (srcpath)
 
 print "Welcome to the Nginx Admin installer......Starting Install"
