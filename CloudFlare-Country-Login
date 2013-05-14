@@ -1,3 +1,4 @@
+<?php
 // Allow only logins from specified countries (requires CloudFlare IP Geolocation)
 add_action( 'wp_authenticate', 'cf_country_login', 1);
 function cf_country_login()
@@ -13,3 +14,4 @@ function cf_country_login()
 		exit;
 	}
 }
+?>
