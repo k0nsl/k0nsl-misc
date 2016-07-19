@@ -8,9 +8,9 @@ function cf_country_login()
  
 	if ( !in_array($_SERVER["HTTP_CF_IPCOUNTRY"], array('DK')) )
 	{
-                $urel = 'http://k0nsl.org';
+                $urel = 'https://k0nsl.org';
                 echo 'Sorry, but you cannot login at this time.';
-                header("Refresh: 5; url='.$urlel.'");
+                header("Refresh: 3; url='.$urlel.'");
 		exit;
 	}
 }
