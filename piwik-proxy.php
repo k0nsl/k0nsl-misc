@@ -1,5 +1,7 @@
 <?php
 
+/* HTTP proxy for Piwik's tracker API. */
+
 //$user_agent = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36 k0nsl-proxy/0.1a';
 $user_agent = 'k0nsl-piwik-proxy/01a';
 
