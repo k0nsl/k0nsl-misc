@@ -1,1 +1,1 @@
-I'll post all sorts of useful miscellaneous stuff in this repo.
+This repository will contain miscellaneous content, for example: shell scripts and other types of smaller scripts in various languages.
