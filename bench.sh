@@ -29,7 +29,7 @@ echo ""
 
 echo -e "\033[35mCPU :\033[0m \033[36m$cname\033[0m"
 echo -e "\033[35mCPU Cores :\033[0m  \033[36m$cores\033[0m"
-echo -e "\033[35mCPU frequency per core\033[0m \033[36m$freq MHz\033[0m"
+echo -e "\033[35mCPU frequency per core :\033[0m \033[36m$freq MHz\033[0m"
 echo -e "\033[35mMemory :\033[0m \033[36m$tram MB\033[0m"
 echo -e "\033[35mSwap Space :\033[0m \033[36m$swap MB\033[0m"
 echo -e "\033[35mUptime :\033[0m \033[36m$up\033[0m"
