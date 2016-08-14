@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="{{@blog.logo}}"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    {{> config}}
+    <script type="text/javascript" src="{{asset "js/jquery.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery-migrate.min.js"}}"></script>
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/default.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/nprogress.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/animate.min.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}"/>
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+{{{body}}}
+
+{{ghost_foot}}
+<script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/nprogress.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/headroom.min.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/default.js"}}"></script>
+
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Source+Sans+Pro::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+
+<script type="text/javascript">
+$('a').filter(function() {
+   return this.hostname && this.hostname !== location.hostname;
+}).addClass("outlink");
+</script>
+
+<script type="text/javascript">
+$('a').click(function() {
+  $(this).attr('target', '_blank');
+});
+</script>
+
+</body>
+</html>
