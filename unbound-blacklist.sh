@@ -22,7 +22,7 @@ awk -v whitelist="$whitelist" '$1 ~ /^127\.|^0\./ && $2 !~ whitelist {gsub("\r",
 awk '{printf "local-zone: \"%s\" redirect\n", $1; printf "local-data: \"%s. A 0.0.0.0\"\n", $1}' > /home/unbound/unbound-compiled/etc/unbound/conf/automated-blocklist.conf
 
 # "Restart" unbound ;-)
-/usr/bin/killall unbound
+killall unbound
 /home/unbound/unbound-compiled/sbin/unbound -c /home/unbound/unbound-compiled/etc/unbound/unbound.conf
 
 # Clean up tempfile
