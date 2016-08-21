@@ -1,0 +1,30 @@
+{{! 作者信息 }}
+{{#author}}
+    <div class="widget widget-profile">
+        <div class="widget-profile-cover overlay {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}"></div>
+        <div class="widget-profile-header">
+            <a class="widget-profile-logo" href="{{url}}">
+            {{#if image}}
+                <img src="{{image}}" alt="{{@blog.title}}" />
+            {{else}}
+                <img src="{{asset "img/user-image.png"}}" alt="{{@blog.title}}" />
+            {{/if}}
+            </a>
+        </div>
+        <span class="widget-profile-title label label-xlg label-minty arrowed-in arrowed-in-right">{{name}}</span>
+        <hr>
+        <p class="widget-profile-desc">
+            {{#if bio}}
+                {{bio}}
+            {{else}}
+                <em><a href="{{@blog.url}}/ghost/team/{{slug}}/">(<strong>I like'em hot when they're hot, I like a naughty-hottie hottie-caust)</a></strong></em>
+            {{/if}}
+        </p>
+        <hr>
+        <div class="author-meta">
+            {{#if location}}<span class="author-location"><i class="fa fa-map-marker"></i> {{location}}</span>{{/if}}
+            {{#if website}}<span class="author-link"><i class="fa fa-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
+            <span class="author-stats"><i class="fa fa-file-text-o"></i> {{plural ../pagination.total empty='Lazy?，What is love' singular='Published only % Article，A little lesss' plural='Total articles published，keep it up'}}</span>
+        </div>
+    </div>
+{{/author}}
