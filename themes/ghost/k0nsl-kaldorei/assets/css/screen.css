@@ -273,7 +273,7 @@ body {
 ::-moz-selection {
     //background: #16a085;
     background: ##FF0000;
-    color: #bfbfbf;
+    color: #FFF;
 }
 ::selection {
     //background: #16a085;
@@ -523,7 +523,8 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     z-index: 10;
     min-height: 100%;
-    background: #000;
+    //background: #000;
+    background: #bfbfbf;
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
 }
