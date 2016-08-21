@@ -690,7 +690,7 @@ body.nav-opened .site-wrapper {
     font-size: 20px;
 }
 .post-title a {
-    color: #2C3F51;
+    color: #ff2828;
     text-decoration: none !important;
 }
 .post-excerpt p {
@@ -2322,6 +2322,19 @@ code.has-numbering {
 .pre-numbering li {
     margin: 0;
     list-style: none;
+}
+
+a.outlink:after {
+	font-family: FontAwesome;
+	content: "\f08e";
+	left: 3px;
+	padding-right: 3px;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	pointer-events: none;
 }
 
 /* ==========================================================================
