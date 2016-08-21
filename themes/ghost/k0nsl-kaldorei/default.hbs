@@ -45,28 +45,41 @@
     </div>
 
     <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.k0nsl.org"]);
+      _paq.push(["setDomains", ["*.k0nsl.org","*.k0nsl.ru"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//s.k0nsl.org/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+
+    <script>
+    var external_title = 'Opens in new window';
+    (function($) {
+    	source=removeSubdomain(location.hostname);
+    	$('a[href^="http://"], a[href^="https://"], a[href^="ftp://"]').filter(function(){return this.hostname&&removeSubdomain(this.hostname)!==source}).attr("onclick","window.open(this.href);return false;").attr("rel", "nofollow").attr("title", external_title).addClass("outlink");
+    })(jQuery);
+    function removeSubdomain(a,b){return a.split(".").slice(-(b||2)).join(".")};
+    </script>
+    <script type="text/javascript">
       WebFontConfig = {
-        google: { families: [ 'Source+Sans+Pro::latin' ] }
+        google: { families: [ 'Press+Start+2P::latin', 'Open+Sans:400,300,300italic,700,700italic:latin', 'Bree+Serif::latin', 'VT323' ] }
       };
       (function() {
         var wf = document.createElement('script');
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.src = '//cdn.k0nsl.org/js/webfont.js';
         wf.type = 'text/javascript';
         wf.async = 'true';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })(); </script>
-
-    <script type="text/javascript">
-    $('a').filter(function() {
-       return this.hostname && this.hostname !== location.hostname;
-    }).addClass("outlink");
-    </script>
-
-    <script type="text/javascript">
-    $('a').click(function() {
-      $(this).attr('target', '_blank');
-    });
     </script>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
