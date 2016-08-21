@@ -548,7 +548,7 @@ body.nav-opened .site-wrapper {
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
-    background: #FFF no-repeat center center;
+    background: #415262 no-repeat center center;
     overflow: hidden;
     border-bottom: 1px solid #EBF2F6;
     height: 80px;
@@ -571,7 +571,7 @@ body.nav-opened .site-wrapper {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    color: #2C3F51;
+    color: #fff;
     padding: 25px 20px;
 }
 .main-nav a:hover {
