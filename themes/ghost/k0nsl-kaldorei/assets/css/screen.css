@@ -686,7 +686,8 @@ body.nav-opened .site-wrapper {
     box-shadow: #FFF 0 0 0 5px;
 }
 .post-title {
-    font-size: 30px;
+    font-family: 'Press Start 2P', serif, monospace;
+    font-size: 20px;
 }
 .post-title a {
     color: #2C3F51;
