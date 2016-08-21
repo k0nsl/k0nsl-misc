@@ -1679,20 +1679,20 @@ body.nav-opened .site-wrapper {
     background: #415262;
 }
 .label-minty.arrowed:before {
-    border-right-color: #009a61;
-    -moz-border-right-colors: #009a61;
+    border-right-color: #415262;
+    -moz-border-right-colors: #415262;
 }
 .label-minty.arrowed-in:before {
-    border-color: #009a61 #009a61 #009a61 transparent;
-    -moz-border-right-colors: #009a61;
+    border-color: #415262 #415262 #415262 transparent;
+    -moz-border-right-colors: #415262;
 }
 .label-minty.arrowed-right:after {
-    border-left-color: #009a61;
+    border-left-color: #415262;
     -moz-border-left-colors: #009a61;
 }
 .label-minty.arrowed-in-right:after {
-    border-color: #009a61 transparent #009a61 #009a61;
-    -moz-border-left-colors: #009a61;
+    border-color: #415262 transparent #415262 #415262;
+    -moz-border-left-colors: #415262;
 }
 .label {
     font-size: 12px;
