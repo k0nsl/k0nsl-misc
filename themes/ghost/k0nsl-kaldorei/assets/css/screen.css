@@ -1675,7 +1675,8 @@ body.nav-opened .site-wrapper {
     -moz-border-right-colors: none;
 }
 .label-minty {
-    background-color: #009a61;
+    //background-color: #009a61;
+    background: #415262;
 }
 .label-minty.arrowed:before {
     border-right-color: #009a61;
