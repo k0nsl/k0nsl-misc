@@ -524,7 +524,7 @@ margin on the iframe, cause it breaks stuff. */
     z-index: 10;
     min-height: 100%;
     //background: #000;
-    background: #bfbfbf;
+    background: #b3b3b3;
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
 }
