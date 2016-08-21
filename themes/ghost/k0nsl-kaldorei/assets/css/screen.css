@@ -569,20 +569,21 @@ body.nav-opened .site-wrapper {
 }
 .main-nav a {
     text-decoration: none;
-    font-family: 'Microsoft Yahei', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #2C3F51;
     padding: 25px 20px;
 }
 .main-nav a:hover {
-    color: #009a61;
+    color: #000;
     border-bottom: 4px solid #009a61;
     margin-bottom: -4px;
 }
 .main-nav-title {
     font-family: 'Press Start 2P', monospace;;
     padding: 23px 0;
-    background: #009a61;
+    //background: #009a61;
+    background: #2C3F51;
     opacity: .9;
 }
 .main-nav-title a {
