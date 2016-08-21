@@ -24,7 +24,7 @@
         <div class="author-meta">
             {{#if location}}<span class="author-location"><i class="fa fa-map-marker"></i> {{location}}</span>{{/if}}
             {{#if website}}<span class="author-link"><i class="fa fa-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
-            <span class="author-stats"><i class="fa fa-file-text-o"></i> {{plural ../pagination.total empty='Lazy?，What is love' singular='Published only % Article，A little lesss' plural='Total articles published，keep it up'}}</span>
+            <span class="author-stats"><i class="fa fa-file-text-o"></i> {{plural ../pagination.total empty='one，two' singular='three % four，five' plural='six % seven，eight'}}</span>
         </div>
     </div>
 {{/author}}
