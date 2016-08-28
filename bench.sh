@@ -58,8 +58,8 @@ buyvm02=$( wget -O /dev/null http://speedtest.lu.buyvm.net/100MB.test 2>&1 | awk
 echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (EU):\033[0m $buyvm02 "
 
 #HostHatch: https://portal.hosthatch.com/aff.php?aff=173
-#hosthatch=$( wget -O /dev/null http://mirror.lax.hosthatch.com/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-#echo -e "\033[35mDownload Speed:\033[0m \033[36m HostHatch (USA):\033[0m $hosthatch "
+hosthatch=$( wget -O /dev/null http://mirror.lax.hosthatch.com/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m HostHatch (USA):\033[0m $hosthatch "
 
 #HDD Benchmark
 echo ""
