@@ -45,13 +45,13 @@ buyvm01=$( wget -O /dev/null http://speedtest.nj.buyvm.net/100MB.test 2>&1 | awk
 echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (US):\033[0m $buyvm01 "
 buyvm01=${buyvm01:0:$((${#buyvm01})) - 4}
 
-#DO: https://www.digitalocean.com/?refcode=85b929177e54
-do=$( wget -O /dev/null http://speedtest-sfo1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-echo -e "\033[35mDownload Speed:\033[0m \033[36m DigitalOcean (US):\033[0m $do "
+#DigitalOcean #1: https://www.digitalocean.com/?refcode=85b929177e54
+do01=$( wget -O /dev/null http://speedtest-sfo1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m DigitalOcean (US):\033[0m $do01 "
 
-#RamNode: https://clientarea.ramnode.com/aff.php?aff=1058
-ramnode=$( wget -O /dev/null http://lg.la.ramnode.com/static/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-echo -e "\033[35mDownload Speed:\033[0m \033[36m RamNode (US):\033[0m $ramnode "
+#RamNode #1: https://clientarea.ramnode.com/aff.php?aff=1058
+rn01=$( wget -O /dev/null http://lg.la.ramnode.com/static/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m RamNode (US):\033[0m $rn01 "
 
 #BuyVM #2: https://my.frantech.ca/aff.php?aff=781
 buyvm02=$( wget -O /dev/null http://speedtest.lu.buyvm.net/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
@@ -60,6 +60,22 @@ echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (EU):\033[0m $buyvm02 "
 #HostHatch: https://portal.hosthatch.com/aff.php?aff=173
 hosthatch=$( wget -O /dev/null http://mirror.lax.hosthatch.com/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m HostHatch (USA):\033[0m $hosthatch "
+
+#DigitalOcean: https://www.digitalocean.com/?refcode=85b929177e54
+do02=$( wget -O /dev/null http://ipv4.speedtest-ams3.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m DigitalOcean (EU):\033[0m $do02 "
+
+#RamNode #2: https://clientarea.ramnode.com/aff.php?aff=1058
+rn02=$( wget -O /dev/null http://lg.nl.ramnode.com/static/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m RamNode (EU):\033[0m $rn02 "
+
+#BuyVM #3: https://my.frantech.ca/aff.php?aff=781
+buyvm03=$( wget -O /dev/null http://speedtest.lu.buyvm.net/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (EU):\033[0m $buyvm03 "
+
+#YourServer: https://www.yourserver.se/portal/aff.php?aff=081
+yourserver=$( wget -O /dev/null http://lindholm.k0nsl.org/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m YourServer (EU):\033[0m $yourserver "
 
 #HDD Benchmark
 echo ""
