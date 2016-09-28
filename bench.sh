@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Mirror: https://k0nsl.org/blog/snippets/bench-cpu-sh/
+#Mirror: https://benchmarks.k0nsl.org/
 
 #Installation von BC
 apt-get install bc -y
