@@ -53,9 +53,9 @@ echo -e "\033[35mDownload Speed:\033[0m \033[36m DigitalOcean (US):\033[0m $do01
 rn01=$( wget -O /dev/null http://lg.la.ramnode.com/static/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m RamNode (US):\033[0m $rn01 "
 
-#BuyVM #2: https://my.frantech.ca/aff.php?aff=781
-buyvm02=$( wget -O /dev/null http://speedtest.lu.buyvm.net/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (EU):\033[0m $buyvm02 "
+#Incero mirror: http://mirror.incero.com/
+incero01=$( wget -O /dev/null http://mirror.incero.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m Incero (US):\033[0m $incero01 "
 
 #HostHatch: https://portal.hosthatch.com/aff.php?aff=173
 hosthatch=$( wget -O /dev/null http://mirror.lax.hosthatch.com/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
