@@ -1,0 +1,11 @@
+{
+  "backend":            "Convos::Core::Backend::File",
+  "contact":            "mailto:convos@k0nsl.org",
+  "default_server":     "irc.k0nsl.org:6697",
+  "forced_irc_server":  "irc.k0nsl.org:6667",
+  "invite_code":        "neinneinnein",
+  "organization_name":  "devNET software group",
+  "plugins":            {},
+  "secure_cookies":     1,
+  "session_secrets":    ["1488"]
+}
