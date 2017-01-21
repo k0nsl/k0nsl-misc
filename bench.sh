@@ -59,7 +59,7 @@ echo -e "\033[35mDownload Speed:\033[0m \033[36m Incero (US):\033[0m $incero01 "
 
 #HostHatch: https://portal.hosthatch.com/aff.php?aff=173
 hosthatch=$( wget -O /dev/null http://mirror.sth.hosthatch.com/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-echo -e "\033[35mDownload Speed:\033[0m \033[36m HostHatch (USA):\033[0m $hosthatch "
+echo -e "\033[35mDownload Speed:\033[0m \033[36m HostHatch (EU):\033[0m $hosthatch "
 
 #DigitalOcean: https://www.digitalocean.com/?refcode=85b929177e54
 do02=$( wget -O /dev/null http://ipv4.speedtest-ams3.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
