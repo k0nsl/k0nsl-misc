@@ -57,6 +57,10 @@ echo -e "\033[35mDownload Speed:\033[0m \033[36m RamNode (US):\033[0m $rn01 "
 incero01=$( wget -O /dev/null http://mirror.incero.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m Incero (US):\033[0m $incero01 "
 
+#Dacentec: https://billing.dacentec.com/hostbill/?affid=88
+dacentec=$( wget -O /dev/null http://mirror.dacentec.com/100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+echo -e "\033[35mDownload Speed:\033[0m \033[36m Dacentec (USA):\033[0m $dacentec "
+
 #HostHatch: https://portal.hosthatch.com/aff.php?aff=173
 hosthatch=$( wget -O /dev/null http://mirror.sth.hosthatch.com/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m HostHatch (EU):\033[0m $hosthatch "
