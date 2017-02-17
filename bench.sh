@@ -21,29 +21,6 @@ echo ""
 echo -e "\033[31m\E[1mColormedia Benchmark 0.1/a (forked by k0nsl)\033[0m"
 echo -e "\033[32mWebsite  : k0nsl.org\033[0m"
 echo -e "\033[32mContact  : irc.k0nsl.org #k0nsl\033[0m"
-#!/bin/bash
-
-#Mirror: https://benchmarks.k0nsl.org/
-
-#Installation von BC
-apt-get install bc -y
-
-#Infos über System
-cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
-cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
-freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
-tram=$( free -m | awk 'NR==2 {print $2}' )
-swap=$( free -m | awk 'NR==4 {print $2}' )
-up=$( uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}')
-kernel=$(uname -r)
-
-#Willkommens-Text
-echo ""
-echo ""
-echo ""
-echo -e "\033[31m\E[1mColormedia Benchmark 0.1/a (forked by k0nsl)\033[0m"
-echo -e "\033[32mWebsite  : k0nsl.org\033[0m"
-echo -e "\033[32mContact  : irc.k0nsl.org #k0nsl\033[0m"
 
 #Allgemeine Informationen
 echo ""
@@ -94,34 +71,6 @@ echo -e "\033[35mDownload Speed:\033[0m \033[36m DigitalOcean (EU):\033[0m $do02
 
 #RamNode #2: https://clientarea.ramnode.com/aff.php?aff=1058
 rn02=$( wget -O /dev/null http://lg.nl.ramnode.com/static/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-echo -e "\033[35mDownload Speed:\033[0m \033[36m RamNode (EU):\033[0m $rn02 "
-
-#BuyVM #3: https://my.frantech.ca/aff.php?aff=781
-buyvm03=$( wget -O /dev/null http://speedtest.lu.buyvm.net/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (EU):\033[0m $buyvm03 "
-
-#YourServer: https://www.yourserver.se/portal/aff.php?aff=081
-yourserver=$( wget -O /dev/null http://lindholm.k0nsl.org/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-echo -e "\033[35mDownload Speed:\033[0m \033[36m YourServer (EU):\033[0m $yourserver "
-
-#HDD Benchmark
-echo ""
-echo -e "\033[37mDisk Benchmark\033[0m"
-echo ""
-
-io=$( ( dd if=/dev/zero of=test_$$ bs=64k count=16k conv=fdatasync && rm -f test_$$ ) 2>&1 | awk -Fs, '{io=$NF} END { print io}' )
-echo "I/O Performance [1]: $io"
-io=$( ( dd if=/dev/zero of=test_$$ bs=64k count=16k conv=fdatasync && rm -f test_$$ ) 2>&1 | awk -Fs, '{io=$NF} END { print io}' )
-echo "I/O Performance [2]: $io"
-io=$( ( dd if=/dev/zero of=test_$$ bs=64k count=16k conv=fdatasync && rm -f test_$$ ) 2>&1 | awk -Fs, '{io=$NF} END { print io}' )
-echo "I/O Performance [3]: $io"
-
-#CPU Benchmark
-echo ""
-echo -e "\033[37mCPU Benchmark\033[0m"
-time echo "scale=4000; a(1)*4" | erg=$(bc -l)
-echo ""
-echo ""
 echo -e "\033[35mDownload Speed:\033[0m \033[36m RamNode (EU):\033[0m $rn02 "
 
 #BuyVM #3: https://my.frantech.ca/aff.php?aff=781
