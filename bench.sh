@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Mirror: https://benchmarks.k0nsl.org/
+#Mirrored at: https://bench.mirror.k0nsl.org
 
 #Installation von BC
 apt-get install bc -y
