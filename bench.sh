@@ -1,9 +1,21 @@
 #!/bin/bash
 
-#Mirrored at: https://bench.mirror.k0nsl.org
+#Official site: https://bench.mirror.k0nsl.org
+
+exists()
+{
+  command -v "$1" >/dev/null 2>&1
+}
 
 #Installation von BC
-apt-get install bc -y
+apt-get -qq -y install bc
+
+#temporarily disable csf/lfd
+if exists csf bc; then
+    csf -x
+else
+ echo ''
+fi
 
 #Infos über System
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
@@ -99,3 +111,10 @@ echo -e "\033[37mCPU Benchmark\033[0m"
 time echo "scale=4000; a(1)*4" | erg=$(bc -l)
 echo ""
 echo ""
+
+#re-enable csf/lfd
+if exists csf bc; then
+    csf -e
+else
+ echo ''
+fi
