@@ -14,7 +14,7 @@ apt-get -qq -y install bc
 if exists csf bc; then
     csf -x
 else
- echo ''
+ echo 'csf/lfd not detected' >/dev/null 2>&1
 fi
 
 #Infos über System
@@ -116,5 +116,5 @@ echo ""
 if exists csf bc; then
     csf -e
 else
- echo ''
+ echo 'csf/lfd not detected' >/dev/null 2>&1
 fi
