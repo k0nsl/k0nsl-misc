@@ -8,11 +8,11 @@ exists()
 }
 
 #Installation von BC
-apt-get -qq -y install bc
+apt-get -qq -y install bc >/dev/null 2>&1
 
 #temporarily disable csf/lfd
-if exists csf bc; then
-    csf -x
+if exists csf; then
+    csf -x >/dev/null 2>&1
 else
  echo 'csf/lfd not detected' >/dev/null 2>&1
 fi
