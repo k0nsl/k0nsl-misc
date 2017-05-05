@@ -114,7 +114,7 @@ echo ""
 
 #re-enable csf/lfd
 if exists csf bc; then
-    csf -e
+    csf -e >/dev/null 2>&1
 else
  echo 'csf/lfd not detected' >/dev/null 2>&1
 fi
