@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #Official site: https://bench.mirror.k0nsl.org
 
