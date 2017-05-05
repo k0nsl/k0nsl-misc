@@ -1,1 +1,1 @@
-This repository will contain miscellaneous content, for example: shell scripts and other types of smaller scripts in various languages.
+This repository contains miscellaneous content, for example: shell scripts and other types of useful scripts.
