@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Official site: https://bench.mirror.k0nsl.org
+#Official site: http://bench.mirror.k0nsl.org
 
 exists()
 {
