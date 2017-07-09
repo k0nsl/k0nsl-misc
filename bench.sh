@@ -52,6 +52,12 @@ echo ""
 echo -e "\033[37mNetwork Benchmark \033[0m"
 echo ""
 
+curl -o /dev/null debian.org -sm3
+if [[ $? != 0 ]]; then
+	echo -e "\e[35mfailed\e[0m"
+	exit 1
+else
+
 #BuyVM #1: https://my.frantech.ca/aff.php?aff=781
 buyvm01=$( wget -O /dev/null http://speedtest.lv.buyvm.net/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (US):\033[0m $buyvm01 "
@@ -92,6 +98,7 @@ echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (EU):\033[0m $buyvm03 "
 #YourServer: https://www.yourserver.se/portal/aff.php?aff=081
 yourserver=$( wget -O /dev/null http://lindholm.k0nsl.org/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m YourServer (EU):\033[0m $yourserver "
+fi
 
 #HDD Benchmark
 echo ""
