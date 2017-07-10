@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 ## Clean up any stale tempfile
 [[ -f /tmp/hosts.working ]] && rm -f /tmp/hosts.working
