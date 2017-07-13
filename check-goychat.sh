@@ -7,5 +7,6 @@ if /usr/bin/torify /usr/bin/curl -s --head http://vid2x7jyypqblcc4.onion/ | /bin
   else
     /bin/echo "The HTTPd isn't returning a healthy reply." >/dev/null
     /usr/bin/swaks -t to@domain.tld -f "from@domain.tld" --header "Subject: Goy.Chat [down]" --body "The tor-wrapper for Goy.Chat is unavailable — investigate immediately." --server mail.domain.tld --auth LOGIN --auth-user "user@domain.tld" --auth-password "redacted" -tls -p 587
+    /usr/bin/curl -s https://domain.tld/goychat-webhook.php
     exit 1
 fi
