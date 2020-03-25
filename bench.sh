@@ -2,22 +2,28 @@
 
 #Official site: http://bench.mirror.k0nsl.org
 
+# User permission check
+if [ ! $(id -u) = 0 ]; then
+  echo "Error: Tor2web install script must be runned by root"
+  exit 1
+fi
+
 exists()
 {
   command -v "$1" >/dev/null 2>&1
 }
 
-#Installation von BC
+# Installation von BC
 apt-get -qq -y install bc >/dev/null 2>&1
 
-#temporarily disable csf/lfd
+# Temporarily disable csf/lfd
 if exists csf; then
     csf -x >/dev/null 2>&1
 else
  echo 'csf/lfd not detected' >/dev/null 2>&1
 fi
 
-#Infos über System
+# System information
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
@@ -26,7 +32,7 @@ swap=$( free -m | awk 'NR==4 {print $2}' )
 up=$( uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}')
 kernel=$(uname -r)
 
-#Willkommens-Text
+# Welcome text
 echo ""
 echo ""
 echo ""
@@ -34,7 +40,7 @@ echo -e "\033[31m\E[1mColormedia Benchmark 0.1/a (forked by k0nsl)\033[0m"
 echo -e "\033[32mWebsite  : k0nsl.org\033[0m"
 echo -e "\033[32mContact  : irc.k0nsl.org #k0nsl\033[0m"
 
-#Allgemeine Informationen
+# General information
 echo ""
 echo -e "\033[37mGeneral Information \033[0m"
 echo ""
@@ -47,7 +53,7 @@ echo -e "\033[35mSwap Space :\033[0m \033[36m$swap MB\033[0m"
 echo -e "\033[35mUptime :\033[0m \033[36m$up\033[0m"
 echo -e "\033[35mKernel :\033[0m \033[36m$kernel\033[0m"
 
-#Netzwerk Benchmark
+# Network Benchmark
 echo ""
 echo -e "\033[37mNetwork Benchmark \033[0m"
 echo ""
@@ -100,7 +106,7 @@ yourserver=$( wget -O /dev/null http://se.lg.yourserver.se/100MB.test 2>&1 | awk
 echo -e "\033[35mDownload Speed:\033[0m \033[36m YourServer (EU):\033[0m $yourserver "
 fi
 
-#HDD Benchmark
+# HDD/SSD Benchmark
 echo ""
 echo -e "\033[37mDisk Benchmark\033[0m"
 echo ""
@@ -112,14 +118,14 @@ echo "I/O Performance [2]: $io"
 io=$( ( dd if=/dev/zero of=test_$$ bs=64k count=16k conv=fdatasync && rm -f test_$$ ) 2>&1 | awk -Fs, '{io=$NF} END { print io}' )
 echo "I/O Performance [3]: $io"
 
-#CPU Benchmark
+# CPU Benchmark
 echo ""
 echo -e "\033[37mCPU Benchmark\033[0m"
 time echo "scale=4000; a(1)*4" | erg=$(bc -l)
 echo ""
 echo ""
 
-#re-enable csf/lfd
+# Re-enable csf/lfd
 if exists csf bc; then
     csf -e >/dev/null 2>&1
 else
