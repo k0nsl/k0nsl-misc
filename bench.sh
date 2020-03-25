@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-#Official site: http://bench.mirror.k0nsl.org
+# Official site: http://bench.mirror.k0nsl.org
 
-# User permission check
+# User permission check (credit: Tor2web)
 if [ ! $(id -u) = 0 ]; then
-  echo "Error: Tor2web install script must be runned by root"
+  echo "Error: bench.sh install script must be runned by root"
   exit 1
 fi
 
