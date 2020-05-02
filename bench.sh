@@ -4,7 +4,7 @@
 
 # User permission check (credit: Tor2web)
 if [ ! $(id -u) = 0 ]; then
-  echo "Error: bench.sh install script must be runned by root"
+  echo "Error: bench.sh install script must be run with elevated privileges."
   exit 1
 fi
 
