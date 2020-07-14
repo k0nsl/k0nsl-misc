@@ -13,8 +13,13 @@ exists()
   command -v "$1" >/dev/null 2>&1
 }
 
-# Installation von BC
-apt-get -qq -y install bc >/dev/null 2>&1
+# Installation of bc
+if exists bc; then
+    echo 'bc detected.' >/dev/null 2>&1
+else
+ apt-get -qq -y install bc >/dev/null 2>&1
+ echo 'bc not detected; installing.' >/dev/null 2>&1
+fi
 
 # Temporarily disable csf/lfd
 if exists csf; then
@@ -126,7 +131,7 @@ echo ""
 echo ""
 
 # Re-enable csf/lfd
-if exists csf bc; then
+if exists csf; then
     csf -e >/dev/null 2>&1
 else
  echo 'csf/lfd not detected' >/dev/null 2>&1
