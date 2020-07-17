@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 
-# Official site: http://bench.mirror.k0nsl.org
+#################################################################################################
+##                                                                                             ##
+## A rudimentary ‘no bullshit’ benchmark tool primarily geared toward Debian-based distros.    ##
+##  _                     _           _                                                        ##
+## | |__   ___ _ __   ___| |__    ___| |__                                                     ##
+## | '_ \ / _ \ '_ \ / __| '_ \  / __| '_ \                                                    ##
+## | |_) |  __/ | | | (__| | | |_\__ \ | | |                                                   ##
+## |_.__/ \___|_| |_|\___|_| |_(_)___/_| |_|                                                   ##
+##                                                                                             ##
+## Official site: http://bench.mirror.k0nsl.org                                                ##
+#################################################################################################
 
 # User permission check (credit: Tor2web)
 if [ ! $(id -u) = 0 ]; then
