@@ -117,7 +117,7 @@ buyvm03=$( wget -O /dev/null http://speedtest.lu.buyvm.net/100MB.test 2>&1 | awk
 echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (EU):\033[0m $buyvm03 "
 
 #YourServer: https://www.yourserver.se/portal/aff.php?aff=081
-yourserver=$( wget -O /dev/null http://lv.lg.yourserver.se/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+yourserver=$( wget -O /dev/null https://lv.lg.yourserver.se/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m YourServer (EU):\033[0m $yourserver "
 fi
 
