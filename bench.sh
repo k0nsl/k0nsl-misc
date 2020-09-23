@@ -93,7 +93,7 @@ rn01=$( wget -O /dev/null http://lg.atl.ramnode.com/static/100MB.test 2>&1 | awk
 echo -e "\033[35mDownload Speed:\033[0m \033[36m RamNode (US):\033[0m $rn01 "
 
 #Incero mirror: http://mirror.incero.com/
-incero01=$( wget -O /dev/null http://mirror.incero.com/VMware-VMvisor-Installer-6.5.0.update01-5969303.x86_64.iso 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+incero01=$( wget -O /dev/null http://mirror.incero.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m Incero (US):\033[0m $incero01 "
 
 #Dacentec: https://billing.dacentec.com/hostbill/?affid=88
@@ -117,7 +117,7 @@ buyvm03=$( wget -O /dev/null http://speedtest.lu.buyvm.net/100MB.test 2>&1 | awk
 echo -e "\033[35mDownload Speed:\033[0m \033[36m BuyVM (EU):\033[0m $buyvm03 "
 
 #YourServer: https://www.yourserver.se/portal/aff.php?aff=081
-yourserver=$( wget -O /dev/null https://lv.lg.yourserver.se/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+yourserver=$( wget -O /dev/null http://lv.lg.yourserver.se/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 echo -e "\033[35mDownload Speed:\033[0m \033[36m YourServer (EU):\033[0m $yourserver "
 fi
 
