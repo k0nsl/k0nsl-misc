@@ -1,0 +1,30 @@
+! /bin/bash
+
+#######################################################################################################################################
+##                                                                                                                                   ##
+##                                                                                                                                   ##
+## NOTE: place this file in “/etc/cron.hourly” as “permdns”, make sure that it is executable (in effect: “chmod +x permdns”).        ##
+##       the reason for this simple script came to mind when some server companies overwrote my already defined and edited           ##
+##       “resolv.conf”. Hence, this simple solution was born due to always having to make sure my resolv.conf values hadn't          ##
+##       been overwriten with those of the server company I was renting from. This was thus the logical and most simplistic          ##
+##       solution I could think of; not a final solution by any stretch of the imagination .                                         ##
+##                                                                                                                                   ##
+##       It has primarily been tested on Debian GNU/Linux 9 but should work fine on any GNU/Linux which has the ability to           ##
+##       run crontab jobs, thus it can be added in the following manner: “* * * * *  /bin/bash /root/permdns” which will             ##
+##       be installing the new crontab given in the example above.                                                                   ##
+##                                                                                                                                   ##
+##      This solution was originally written by me sometime early 2017, if I remember correctly.                                     ##
+##															                                                                                                     ##
+##      That is all.                                                                                                                 ##
+##                                                                                                                                   ##
+## CONTACT INFO: you can write to me via the following e-mail ― i.am@k0nsl.org. I am also on Twitter as @k0nsl,                      ##
+##               which I check occasionally.                                                                                         ##
+##                                                                                                                                   ##
+#######################################################################################################################################
+
+
+mv /etc/resolv.conf /etc/resolv.conf.bak
+echo "nameserver 127.0.0.1" >> /etc/resolv.conf
+echo "nameserver ::1" >> /etc/resolv.conf
+echo "nameserver 91.239.100.100" >> /etc/resolv.conf
+echo "nameserver 2001:67c:28a4::" >> /etc/resolv.conf
