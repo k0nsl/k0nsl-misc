@@ -1,5 +1,6 @@
-!/usr/bin/env bash
-SERVER=69.58.186.114
+#!/usr/bin/env bash
+
+SERVER=91.239.100.100
 PORT=53
 </dev/tcp/$SERVER/$PORT
 if [ "$?" -ne 0 ]; then
