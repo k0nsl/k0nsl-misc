@@ -7,7 +7,7 @@
 whitelist='/(k0nsl.org|goy.su)/'
 
 ## URLs of Ad Blacklists to Use
-blacklist=('http://winhelp2002.mvps.org/hosts.txt' \
+blacklist=('https://winhelp2002.mvps.org/hosts.txt' \
            'http://pgl.yoyo.org/as/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext' \
            'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts' \
            'https://adaway.org/hosts.txt')
